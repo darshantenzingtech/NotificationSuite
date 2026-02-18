@@ -6,11 +6,9 @@ namespace NotificationSuite.AzureServices.Service;
 public class EventNotificationService : IEventNotificationService
 {
     private readonly AppDbContext _context;
-    private readonly AzureNotificationService _azureService;
+    private readonly IAzureNotificationService _azureService;
 
-    public EventNotificationService(
-        AppDbContext context,
-        AzureNotificationService azureService)
+    public EventNotificationService(AppDbContext context, IAzureNotificationService azureService)
     {
         _context = context;
         _azureService = azureService;
